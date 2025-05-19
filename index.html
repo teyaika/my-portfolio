@@ -7,11 +7,17 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div id="loader">
+    <div class="loader-circle"></div>
+    <img src="images/logo.png" alt="logo" class="loader-logo" />
+  </div>
   <header class="site-header">
-    <img src="images/logo.png" alt="logo" class="logo" />
-    <h1 class="site-title">
+    <a href="index.html">
+      <img src="images/logo.png" alt="logo" class="logo" />
+      <h1 class="site-title">
       <a href="index.html">YOKODA AIKA PORTFOLIO</a>
-    </h1>
+      </h1>
+    </a>
   </header>
 
   <section class="text-overlay">
@@ -37,6 +43,14 @@
   <a href="works.html" class="works-button">作品はこちら</a>
   </section>
 
+  <script>
+    window.addEventListener("load", function () {
+      const loader = document.getElementById("loader");
+      loader.style.opacity = "0";
+      loader.style.pointerEvents = "none";
+      setTimeout(() => loader.style.display = "none", 500);
+    });
+  </script>
 </body>
 </html>
 
